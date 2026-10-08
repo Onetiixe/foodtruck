@@ -1,93 +1,75 @@
-/* =====================================================
-   LES FAIM'BULEUSES
-   JAVASCRIPT
-===================================================== */
-
-
-/* =====================================================
+/* =========================
    MENU MOBILE
-===================================================== */
+========================= */
 
 const menuToggle = document.querySelector(".menu-toggle");
-
 const nav = document.querySelector(".nav");
 
+if (menuToggle && nav) {
 
-menuToggle.addEventListener("click", function () {
+    menuToggle.addEventListener("click", function () {
 
-    nav.classList.toggle("open");
-
-});
-
-
-/* Fermer le menu après avoir cliqué sur un lien */
-
-const navLinks = document.querySelectorAll(".nav a");
-
-
-navLinks.forEach(function (link) {
-
-    link.addEventListener("click", function () {
-
-        nav.classList.remove("open");
+        nav.classList.toggle("open");
 
     });
 
-});
+
+    document.querySelectorAll(".nav a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            nav.classList.remove("open");
+
+        });
+
+    });
+
+}
 
 
-
-/* =====================================================
+/* =========================
    FILTRE DE LA CARTE
-===================================================== */
+========================= */
 
-const filters =
-    document.querySelectorAll(".filter");
-
-
-const cards =
-    document.querySelectorAll(".menu-card");
+const filterButtons = document.querySelectorAll(".filter-btn");
+const menuCards = document.querySelectorAll(".menu-card");
 
 
-filters.forEach(function (filter) {
+filterButtons.forEach(function (button) {
 
-    filter.addEventListener("click", function () {
+    button.addEventListener("click", function () {
+
+        const filter = button.dataset.filter;
 
 
-        /* Retire la classe active */
+        /* Retire la classe active de tous les boutons */
 
-        filters.forEach(function (item) {
+        filterButtons.forEach(function (btn) {
 
-            item.classList.remove("active");
+            btn.classList.remove("active");
 
         });
 
 
         /* Active le bouton sélectionné */
 
-        filter.classList.add("active");
+        button.classList.add("active");
 
 
-        /* Récupère la catégorie */
+        /* Affiche les bons produits */
 
-        const category =
-            filter.dataset.category;
+        menuCards.forEach(function (card) {
+
+            const category = card.dataset.category;
 
 
-        /* Affiche / cache les produits */
+            if (filter === "all" || category === filter) {
 
-        cards.forEach(function (card) {
-
-            if (
-                category === "all" ||
-                card.dataset.category === category
-            ) {
-
-                card.classList.remove("hidden");
+                card.style.display = "block";
 
             } else {
 
-                card.classList.add("hidden");
+                card.style.display = "none";
 
             }
 
@@ -98,47 +80,40 @@ filters.forEach(function (filter) {
 });
 
 
+/* =========================
+   FORMULAIRE CONTACT
+========================= */
 
-/* =====================================================
-   FORMULAIRE DE CONTACT
-===================================================== */
-
-const form =
-    document.getElementById("contactForm");
-
-
-const formMessage =
-    document.getElementById("formMessage");
+const contactForm = document.querySelector("#contactForm");
+const formMessage = document.querySelector("#formMessage");
 
 
-form.addEventListener("submit", function (event) {
+if (contactForm) {
 
-    /* Empêche le rechargement de la page */
+    contactForm.addEventListener("submit", function (event) {
 
-    event.preventDefault();
-
-
-    /* Message */
-
-    formMessage.textContent =
-        "Merci ❤️ Votre message a bien été préparé !";
+        event.preventDefault();
 
 
-    /* Vide le formulaire */
-
-    form.reset();
-
-});
+        formMessage.textContent =
+            "Merci pour votre message. Nous vous répondrons rapidement.";
 
 
+        contactForm.reset();
 
-/* =====================================================
+    });
+
+}
+
+
+/* =========================
    ANNÉE AUTOMATIQUE
-===================================================== */
+========================= */
 
-const year =
-    document.getElementById("year");
+const year = document.querySelector("#year");
 
+if (year) {
 
-year.textContent =
-    new Date().getFullYear();
+    year.textContent = new Date().getFullYear();
+
+}
