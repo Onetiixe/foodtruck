@@ -2803,3 +2803,624 @@ body {
         transition: none;
     }
 }
+
+
+/* =========================
+   MOBILE TEXT RHYTHM
+========================= */
+
+@media (max-width: 700px) {
+    .hero {
+        text-align: left;
+    }
+
+    .hero-content > p {
+        margin-right: 0;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .hero-buttons {
+        align-items: stretch;
+    }
+
+    .section-header {
+        width: 100%;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 32px;
+        text-align: left;
+    }
+
+    .section-header > div {
+        width: 100%;
+    }
+
+    .section-header > div::after {
+        display: block;
+        width: 42px;
+        height: 2px;
+        margin-top: 18px;
+        background: linear-gradient(90deg, var(--wine), var(--gold-light));
+        content: "";
+    }
+
+    .section-header > p {
+        width: 100%;
+        max-width: 38ch;
+        margin: 0;
+        text-align: left;
+    }
+
+    .intro {
+        text-align: left;
+    }
+
+    .intro .container {
+        max-width: none;
+        padding: 24px 20px 24px 22px;
+        border-left: 2px solid var(--gold);
+        background: linear-gradient(105deg, #b99a5d12, #b99a5d00 82%);
+        box-shadow: inset 1px 0 #ffffff, 0 16px 38px #211c1c08;
+        text-align: left;
+    }
+
+    .intro .container::before,
+    .intro .container::after {
+        display: none;
+    }
+
+    .intro p {
+        max-width: 42ch;
+        margin: 16px 0 0;
+        text-align: left;
+    }
+
+    .agenda-section .section-header > p {
+        color: #e3d9cf;
+    }
+
+    .agenda-card {
+        text-align: left;
+    }
+
+    .artisan-card {
+        padding: 28px 24px;
+        text-align: left;
+    }
+
+    .artisan-card p {
+        max-width: 38ch;
+    }
+
+    .cta-content {
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .cta-content > div {
+        padding-left: 18px;
+        border-left: 1px solid #dfc991a6;
+    }
+
+    .cta-content h2,
+    .cta-content p {
+        margin-right: 0;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .cta-content h2 {
+        max-width: 14ch;
+    }
+
+    .contact-info,
+    .contact-info > p,
+    .contact-list {
+        text-align: left;
+    }
+
+    .contact-list a {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .footer-top,
+    .footer-bottom {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .footer-links {
+        justify-content: flex-start;
+    }
+}
+
+
+/* =========================
+   TEXT CONTRAST & CONTACT
+========================= */
+
+.section-header > p,
+.intro p,
+.contact-info > p,
+.artisan-card p {
+    color: #443832;
+}
+
+.section-header > p {
+    padding: 17px 20px;
+    border-left: 2px solid var(--gold);
+    background: linear-gradient(100deg, #b99a5d1c, #b99a5d05 85%);
+    font-weight: 500;
+}
+
+.intro {
+    background:
+        radial-gradient(ellipse at 8% 50%, #c9a45c26, transparent 42%),
+        linear-gradient(110deg, #eadcc9, #f8f2e9 52%, #eadcc9);
+}
+
+.intro .container {
+    position: relative;
+    padding: 34px clamp(24px, 5vw, 68px);
+    border: 1px solid #b99a5d80;
+    background: linear-gradient(135deg, #fffdf9f2, #fbf5ebeb);
+    box-shadow: 0 24px 60px #211c1c12, inset 0 0 0 5px #b99a5d0a;
+}
+
+.intro .container::before,
+.intro .container::after {
+    width: 2px;
+    height: 70px;
+    background: linear-gradient(transparent, var(--wine), var(--gold), transparent);
+}
+
+.intro h2 {
+    color: #211819;
+}
+
+.intro p {
+    font-weight: 500;
+}
+
+.agenda-card p,
+.artisan-card p {
+    color: #51453e;
+}
+
+.agenda-section .agenda-card p {
+    color: #51453e;
+}
+
+.agenda-section .section-header > p {
+    color: #f5ece2;
+    border-left-color: var(--gold-light);
+    background: linear-gradient(100deg, #dfc99117, #dfc99104 85%);
+}
+
+.contact-info > p {
+    max-width: 48ch;
+    font-weight: 500;
+    line-height: 1.9;
+}
+
+.contact-section {
+    background:
+        radial-gradient(ellipse at 100% 10%, #b99a5d1c, transparent 38%),
+        linear-gradient(115deg, #eadfD1, #f5eee5 58%, #eee2d3);
+}
+
+.contact-list a {
+    background: linear-gradient(135deg, #fffdf9, #f5ead9);
+    border-color: #b99a5d4d;
+    border-top-width: 3px;
+}
+
+.contact-list strong {
+    white-space: nowrap;
+    overflow-wrap: normal;
+    font-size: clamp(11px, 3.2vw, 13px);
+    letter-spacing: 0;
+    color: #941b23;
+}
+
+@media (max-width: 700px) {
+    .intro .container {
+        padding: 24px 20px 24px 22px;
+        border-top: 1px solid #b99a5d80;
+        border-right: 1px solid #b99a5d80;
+        border-bottom: 1px solid #b99a5d80;
+        border-left: 2px solid var(--gold);
+        background: linear-gradient(105deg, #fffdf9f2, #fbf5ebd9);
+        box-shadow: 0 20px 46px #211c1c12, inset 0 0 0 4px #b99a5d0a;
+    }
+
+    .intro p,
+    .section-header > p,
+    .contact-info > p,
+    .artisan-card p {
+        color: #514640;
+    }
+
+    .agenda-section .section-header > p {
+        color: #f1e7dd;
+    }
+
+    .contact-list {
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .contact-list a {
+        width: 100%;
+        min-width: 0;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .contact-list strong {
+        max-width: 100%;
+        white-space: nowrap;
+        font-size: clamp(11px, 3.5vw, 13px);
+    }
+
+    .section-header > p {
+        padding: 14px 16px;
+    }
+}
+
+
+/* =========================
+   EDITORIAL BRAND FINISH
+========================= */
+
+:root {
+    --wine: #941b23;
+    --gold: #aa8647;
+}
+
+.section-header > div::after {
+    display: block;
+    width: 46px;
+    height: 2px;
+    margin-top: 20px;
+    background: linear-gradient(90deg, var(--wine), var(--gold));
+    content: "";
+}
+
+.section-header h2,
+.contact-info h2,
+.intro h2 {
+    color: #241a19;
+}
+
+.section-header > p,
+.intro p,
+.contact-info > p,
+.artisan-card p,
+.agenda-card p {
+    color: #40352f;
+}
+
+.hero-content > p {
+    color: #51443d;
+}
+
+.intro {
+    background:
+        radial-gradient(ellipse at 8% 50%, #b99a5d2b, transparent 42%),
+        linear-gradient(112deg, #e5d3bc, #f6ede1 48%, #e9d9c6);
+}
+
+.intro .container {
+    border-color: #aa8647;
+    background: linear-gradient(135deg, #fffdf9f5, #fbf2e5f2);
+    box-shadow: 0 28px 68px #211c1c18, inset 0 0 0 5px #aa864710;
+}
+
+.intro p {
+    max-width: 64ch;
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.section-header > p {
+    border-left-color: var(--wine);
+    background: linear-gradient(100deg, #aa86471f, #aa864705 88%);
+    line-height: 1.9;
+}
+
+.agenda-section .section-header > p {
+    color: #f5ece2;
+    border-left-color: var(--gold-light);
+    background: linear-gradient(100deg, #dfc9911f, #dfc99106 88%);
+}
+
+.agenda-section .agenda-card {
+    border-color: #aa86477a;
+    background: linear-gradient(145deg, #fffefa, #f4eadc);
+}
+
+.agenda-card .day {
+    color: var(--wine);
+}
+
+.artisans-section {
+    background:
+        radial-gradient(ellipse at 100% 0%, #aa864716, transparent 34%),
+        linear-gradient(180deg, #fffdf9, #f6f0e7);
+}
+
+.artisan-card {
+    border-color: #aa86474d;
+    background: linear-gradient(145deg, #fffefa, #f6eee3);
+}
+
+.artisan-number {
+    border-color: #aa864799;
+    background: linear-gradient(145deg, #f8edda, #ead8b7);
+    color: var(--wine);
+    box-shadow: inset 0 0 0 4px #fffdf9a6;
+}
+
+.artisan-card h3 {
+    color: #2a201e;
+}
+
+.cta-section {
+    background:
+        radial-gradient(ellipse at 12% 100%, #e8bf7330, transparent 42%),
+        radial-gradient(ellipse at 90% 0%, #ffffff18, transparent 35%),
+        linear-gradient(115deg, #851820, #b22029 55%, #78171e);
+}
+
+.cta-section .section-label {
+    color: #f3dca9;
+}
+
+.contact-section {
+    background:
+        radial-gradient(ellipse at 100% 10%, #aa864725, transparent 38%),
+        linear-gradient(115deg, #e6d6c3, #f4ece1 58%, #e9dac8);
+}
+
+.contact-list a {
+    border-color: #aa864759;
+    border-top-color: var(--wine);
+    background: linear-gradient(140deg, #fffefa, #f2e5d3);
+    box-shadow: 0 16px 36px #211c1c12, inset 0 1px #ffffff;
+}
+
+.contact-list a:hover {
+    border-top-color: #6f1119;
+    background: linear-gradient(140deg, #fffefa, #edddc6);
+}
+
+.contact-list strong {
+    color: #801820;
+}
+
+.footer {
+    background:
+        radial-gradient(ellipse at 90% 0%, #aa86471c, transparent 34%),
+        linear-gradient(125deg, #1d1919, #121111);
+}
+
+.footer-phone {
+    color: #f1dcae;
+}
+
+@media (max-width: 700px) {
+    .hero-content > p {
+        color: #4b3e38;
+    }
+
+    .intro .container {
+        border-color: #aa864780;
+        border-left: 2px solid var(--gold);
+        background: linear-gradient(120deg, #fffdf9f5, #f8eedfef);
+    }
+
+    .intro p,
+    .section-header > p,
+    .contact-info > p,
+    .artisan-card p {
+        color: #40352f;
+    }
+
+    .agenda-section .section-header > p {
+        color: #f5ece2;
+    }
+
+    .section-header > div::after {
+        margin-top: 14px;
+    }
+
+    .contact-list a {
+        border-left: 3px solid var(--gold);
+        border-top: 2px solid var(--wine);
+    }
+}
+
+
+/* =========================
+   RICH BRAND COLOUR
+========================= */
+
+:root {
+    --wine: #861820;
+    --gold: #9d7538;
+    --gold-light: #e9cf93;
+}
+
+.hero {
+    background:
+        radial-gradient(ellipse at 83% 15%, #c9272f24 0 10%, transparent 10.5%),
+        radial-gradient(ellipse at 8% 95%, #c9a45c1c, transparent 36%),
+        linear-gradient(120deg, #fffaf2 0%, #f4e7d7 54%, #e6c9a9 100%);
+}
+
+.hero::before {
+    background: #b820291c;
+}
+
+.hero-label,
+.section-label {
+    color: #861820;
+}
+
+.hero h1 span {
+    color: #a91f27;
+    text-shadow: 0 7px 24px #a91f271a;
+}
+
+.hero-content > p {
+    color: #41342f;
+}
+
+.intro {
+    background:
+        radial-gradient(ellipse at 5% 45%, #c9a45c38, transparent 40%),
+        linear-gradient(112deg, #dfc6a7, #f3e4d0 48%, #e6ceb3);
+}
+
+.intro .container {
+    border-color: #a98247;
+    background: linear-gradient(130deg, #fffaf1f7, #f7ebd9f5);
+    box-shadow: 0 28px 68px #6d351b17, inset 0 0 0 5px #b99a5d14;
+}
+
+.section-header > p {
+    border-left-color: #a91f27;
+    background: linear-gradient(100deg, #c9272f1a, #c9a45c17 75%, #c9a45c04);
+    color: #392b27;
+}
+
+.agenda-section {
+    background:
+        radial-gradient(ellipse at 8% 100%, #a91f272e, transparent 42%),
+        radial-gradient(ellipse at 92% 0%, #c9a45c21, transparent 36%),
+        linear-gradient(125deg, #261719, #171516 58%, #2b1a18);
+}
+
+.agenda-section .section-header > p {
+    border-left-color: #e9cf93;
+    background: linear-gradient(100deg, #e9cf9324, #e9cf9308 90%);
+    color: #fff1db;
+}
+
+.agenda-card {
+    border-color: #b99a5d;
+    background: linear-gradient(145deg, #fffdf8, #f1e3d2);
+}
+
+.agenda-card::before {
+    background: linear-gradient(90deg, #a91f27, #e0ba70 72%, #f1dfb9);
+}
+
+.agenda-card .day {
+    color: #a91f27;
+}
+
+.menu-section {
+    background:
+        radial-gradient(ellipse at 100% 20%, #c9272f13, transparent 35%),
+        linear-gradient(120deg, #f0e2d3, #fbf4eb 50%, #efdfce);
+}
+
+.menu-poster {
+    border-color: #fffaf2;
+    outline-color: #ad874d;
+    box-shadow: 0 34px 84px #6b2d211f, 0 0 0 4px #ad874d17;
+}
+
+.artisans-section {
+    background:
+        radial-gradient(ellipse at 0% 100%, #c9a45c24, transparent 35%),
+        linear-gradient(180deg, #fffaf2, #f2e7d9);
+}
+
+.artisan-card {
+    border-color: #ad874d75;
+    background: linear-gradient(145deg, #fffdf8, #f1e2d0);
+    box-shadow: 0 22px 52px #5a2a1b12;
+}
+
+.artisan-card::after {
+    height: 2px;
+    background: linear-gradient(90deg, #a91f27, #d6b36e, transparent);
+}
+
+.artisan-number {
+    border-color: #ad874d;
+    background: linear-gradient(145deg, #f5dfb4, #ead1a3);
+    color: #861820;
+}
+
+.cta-section {
+    background:
+        radial-gradient(ellipse at 10% 100%, #f0c36b40, transparent 44%),
+        radial-gradient(ellipse at 90% 0%, #ff9b7a30, transparent 38%),
+        linear-gradient(112deg, #75141c, #b31e29 52%, #901b21);
+}
+
+.cta-section .section-label {
+    color: #f4dda9;
+}
+
+.contact-section {
+    background:
+        radial-gradient(ellipse at 100% 10%, #c9a45c38, transparent 38%),
+        linear-gradient(115deg, #e5cfb7, #f4e8d8 55%, #ead5bd);
+}
+
+.contact-list a {
+    border-color: #b99a5d80;
+    border-top-color: #a91f27;
+    background: linear-gradient(135deg, #fffaf1, #efdfca);
+    box-shadow: 0 18px 42px #5b291914, inset 0 1px #ffffff;
+}
+
+.contact-list a:hover {
+    background: linear-gradient(135deg, #fffaf1, #ead3b7);
+}
+
+.contact-list strong {
+    color: #861820;
+}
+
+.footer {
+    background:
+        radial-gradient(ellipse at 88% 0%, #b99a5d25, transparent 34%),
+        linear-gradient(125deg, #211718, #121111 58%, #2a1918);
+}
+
+@media (max-width: 700px) {
+    .hero {
+        background:
+            radial-gradient(ellipse at 95% 15%, #c9272f20 0 13%, transparent 13.5%),
+            linear-gradient(145deg, #fffaf2, #f0e0ce 75%, #e9d1b6);
+    }
+
+    .intro .container {
+        border-color: #ad874d;
+        border-left-color: #a91f27;
+        background: linear-gradient(120deg, #fffaf1f5, #f3e2ccf2);
+    }
+
+    .section-header > p {
+        background: linear-gradient(100deg, #c9272f1a, #c9a45c1c 88%);
+    }
+
+    .agenda-section .section-header > p {
+        background: linear-gradient(100deg, #e9cf9324, #e9cf9308 90%);
+    }
+
+    .contact-section {
+        background:
+            radial-gradient(ellipse at 100% 10%, #c9a45c30, transparent 42%),
+            linear-gradient(145deg, #e9d8c3, #f5eadc 72%, #edddca);
+    }
+}
